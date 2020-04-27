@@ -1,0 +1,53 @@
+plugins {
+    id "com.github.spotbugs" version "1.6.6"
+    id "net.saliman.cobertura" version "2.6.0"
+}
+
+wrapper {
+    gradleVersion = '5.2.1'
+}
+
+ext {
+    springbootVersion = '2.1.9.RELEASE'
+    springKafkaVersion = '2.2.9.RELEASE'
+    springDependencyManagement = '1.0.8.RELEASE'
+    sparkVersion = '2.4.4'
+    hadoopVersion = '3.2.1'
+    junitVersion = '5.3.1'
+    mrunitVersion = '1.0.0'
+    lombokVersion = '1.18.6'
+    log4j2Version = '2.11.2'
+    guavaVersion = '11.0.2'
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'pmd'
+    apply plugin: 'checkstyle'
+    apply plugin: 'com.github.spotbugs'
+    apply plugin: 'net.saliman.cobertura'
+
+    pmd {
+        ignoreFailures = true
+    }
+
+    checkstyle {
+        toolVersion = '8.16'
+    }
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    dependencies {
+        compileOnly "org.projectlombok:lombok:$lombokVersion"
+        annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+    }
+}
+
+group 'com.nx.dev'
+version '1.0-SNAPSHOT'

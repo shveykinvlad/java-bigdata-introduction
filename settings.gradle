@@ -1,0 +1,13 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+    }
+}
+
+rootProject.name = 'java-bigdata-introduction'
+include 'kafka-producer'
+include 'kafka-consumer'
+include 'spark-rdd-spam'
+include 'spark-wordcount'
+include 'hadoop-wordcount'
+

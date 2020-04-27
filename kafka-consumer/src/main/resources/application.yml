@@ -1,0 +1,8 @@
+server:
+  port: 0
+
+kafka:
+  group: group_id
+  servers: localhost:9092
+  topic: secret-messages
+  rate: 1000

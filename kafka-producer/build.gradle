@@ -1,0 +1,14 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.9.RELEASE'
+    id "io.spring.dependency-management" version "1.0.8.RELEASE"
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-actuator:$springbootVersion"
+    implementation "org.springframework.boot:spring-boot-starter-web:$springbootVersion"
+    implementation "org.springframework.kafka:spring-kafka:$springKafkaVersion"
+    compile "org.apache.logging.log4j:log4j-api:$log4j2Version"
+    compile "org.apache.logging.log4j:log4j-core:$log4j2Version"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+}

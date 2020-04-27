@@ -1,0 +1,7 @@
+dependencies {
+    compile "org.apache.hadoop:hadoop-common:$hadoopVersion"
+    compile "org.apache.hadoop:hadoop-mapreduce-client-core:$hadoopVersion"
+    compile "org.apache.logging.log4j:log4j-api:$log4j2Version"
+    compile "org.apache.logging.log4j:log4j-core:$log4j2Version"
+    testCompile "org.apache.mrunit:mrunit:$mrunitVersion:hadoop2"
+}

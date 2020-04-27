@@ -1,0 +1,5 @@
+dependencies {
+    compile "org.apache.spark:spark-core_2.11:$sparkVersion"
+    compile "org.apache.logging.log4j:log4j-api:$log4j2Version"
+    compile "org.apache.logging.log4j:log4j-core:$log4j2Version"
+}
